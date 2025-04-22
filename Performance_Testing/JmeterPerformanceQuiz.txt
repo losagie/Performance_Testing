@@ -1,0 +1,39 @@
+The response time for each of the test is the duration when the request was sent from the client (which is the JMETER) to the server and the time when the response is received. It indicates the performance of the application being tested such as its responsiveness, turnaround and throughput
+
+This question can be answered accurately by analyzing the test results provided by JMETER. The average response time could be found in the JMETER 'Summary Report' or 'Aggregate Report'. From the report of the test I executed, it shows that it took an average time of 2.75secs to execute the 'google speed test' 
+
+Similar to the preceding question. We  can accurately answer this question  by analyzing the test results provided by JMETER. The average response time  could be found in the JMETER 'Summary Report' .It is essential to analyze the dataset collected during the test and extract the average value. From the report of the test I executed, it shows that it took an average time of 1.5secs to execute the 'calculator test' 
+
+Some factors that may have affected the response time of my test include:
+1. JMETER Configuration
+2. Network Latency
+3. Geographical location
+4. Server Load  and capacity
+5. Server Resources
+6. Thread Concurrency
+7. Test Environment such as Load balancer, caching mechanisms and Database performance
+8. Protocols and Encryption
+9. Request and response size
+10. Application specific errors such as API or backend performance and Third Party Services
+
+When performing a JMeter performance test, if the response times on the graph are drastically different, it could be caused by several factors. Here's a breakdown of potential reasons for this variability:
+
+1.Server Load Fluctuations: If the server is under high load or resource contention (e.g., CPU, memory, disk I/O), its performance can vary significantly. As more users hit the system, it might struggle to handle the load, causing spikes in response time.
+
+2.Server Scaling Issues: If the server isn't scaling efficiently or is not optimized for high concurrent load, response times may vary as more users are added to the test.
+
+3.Network Fluctuations: Unstable or variable network conditions (such as intermittent packet loss, congestion, or bandwidth issues) between the JMeter client and the server can cause response times to fluctuate drastically.
+
+4.Geographic Distance: If JMeter is running from a location far from the server (e.g., testing globally), response times can vary due to differences in routing and network congestion
+
+5.Third-Party Dependencies: If the application interacts with third-party services, external APIs, or remote resources, the response time can vary based on the availability and performance of these services. For example, if the external service experiences high latency or downtime, response times for the entire system can increase.
+
+6.Database Bottlenecks: If the application’s database queries are slow or unoptimized, the response times will vary based on database load and query performance
+
+To make a JMeter test more robust and enable it to recognize failures of the software under test faster, I should focus on improving error detection, handling, and reporting during my performance testing. Here are some strategies to help me achieve that:
+1. Use Assertion to validate responses
+2. Use timers to detect delays & bottlenecks
+3. Log errors with custom log
+4. Monitor system and server performance in real time
+5. Enable 'Failure' sampling in listeners
+
